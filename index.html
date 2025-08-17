@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhavya Kothari | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Poppins:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+<div id="bootScreen" class="boot-screen">
+    <!-- <div class="boot-crt-overlay"></div> -->
+     <canvas id="matrixCanvas" class="matrix-canvas"></canvas>
+  <div class="boot-terminal hack-terminal">
+<pre id="bootLines" class="hack-lines">
+ _                _
+| |__   __ _  ___| | _____ _ __
+| '_ \ / _` |/ __| |/ / _ \ '__|
+| |_) | (_| | (__|   <  __/ |
+|_.__/ \__,_|\___|_|\_\___|_|   
+      BHAVYA KOTHARI
+</pre>
+
+    <span class="boot-command" id="bootCommandLine">Initializing cyber routines<span class='boot-cursor'>█</span></span>
+  </div>
+</div>
+
+
+    <div id="scrollBar"></div>
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <span class="logo-text">BK</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="command-palette-btn" aria-label="Open command palette">
+          <span class="kbd">⌘K</span>
+        </button>
+      </div>
+    </nav>
+
+    <canvas id="backgroundParticles" class="background-particles"></canvas>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="particles-bg" id="particles"></div>
+      <div class="hero-content">
+        <h1 class="hero-name" id="heroName">Bhavya Kothari</h1>
+        <p class="hero-tagline">
+          Designing the Future, One Line of Code at a Time.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              Hi, I'm Bhavya Kothari — a technology enthusiast passionate about
+              building impactful digital solutions. I've worked on web
+              development (HTML, CSS, JavaScript), created applications in
+              Flutter, and I'm currently exploring Machine Learning and AI to
+              expand my scope of knowledge.
+            </p>
+            <p>
+              I'm fluent in Python, Java, C, Dart, and JavaScript, and enjoy
+              working on projects that combine creativity with real-world
+              problem-solving.
+            </p>
+          </div>
+          <div class="tech-stack">
+            <h3 class="tech-title">Tech Stack</h3>
+            <div class="tech-chips" id="techChips">
+              <!-- Tech chips will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Projects will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog">
+      <div class="container">
+        <h2 class="section-title">Dev Notes</h2>
+        <div class="terminal">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="terminal-btn red"></span>
+              <span class="terminal-btn yellow"></span>
+              <span class="terminal-btn green"></span>
+            </div>
+            <div class="terminal-title">~/dev-notes</div>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-line">
+              <span class="prompt">bhavya@dev:~$</span>
+              <span class="command">ls -la blog/</span>
+            </div>
+            <div class="terminal-line">
+              <span class="output">total 0</span>
+            </div>
+            <div class="terminal-line">
+              <span class="output"
+                >drwxr-xr-x 2 bhavya staff 64 Aug 17 11:00 .</span
+              >
+            </div>
+            <div class="terminal-line">
+              <span class="output"
+                >drwxr-xr-x 3 bhavya staff 96 Aug 17 11:00 ..</span
+              >
+            </div>
+            <div class="terminal-line">
+              <span class="prompt">bhavya@dev:~$</span>
+              <span class="command">echo "Coming soon..."</span>
+            </div>
+            <div class="terminal-line">
+              <span class="output">Coming soon...</span>
+            </div>
+            <div
+              id="interactiveOutput"
+              class="terminal-interactive-output"
+            ></div>
+            <div class="terminal-line">
+              <span class="prompt">bhavya@dev:~$</span>
+              <input
+                type="text"
+                id="terminalInput"
+                class="terminal-input"
+                autocomplete="off"
+                placeholder="Type a command (e.g., help)"
+                aria-label="Dev Notes command input"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-form-container">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="submit-btn">
+                Send Message
+                <span class="btn-glow"></span>
+              </button>
+            </form>
+          </div>
+          <div class="social-links">
+            <h3>Connect With Me</h3>
+            <div class="social-buttons">
+              <a
+                href="mailto:bhavyaskothari@gmail.com"
+                class="social-btn email"
+                target="_blank"
+              >
+                <span class="social-icon">✉</span>
+                <span>Email</span>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/bhavyaxkothari/"
+                class="social-btn linkedin"
+                target="_blank"
+              >
+                <span class="social-icon">🔗</span>
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href="https://github.com/amateurcoder015"
+                class="social-btn github"
+                target="_blank"
+              >
+                <span class="social-icon">⚡</span>
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Command Palette Modal -->
+    <div class="command-palette hidden" id="commandPalette">
+      <div class="command-palette-backdrop"></div>
+      <div class="command-palette-modal">
+        <div class="command-search">
+          <input
+            type="text"
+            id="commandInput"
+            placeholder="Type a command..."
+          />
+        </div>
+        <div class="command-results" id="commandResults">
+          <!-- Results will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="nowPlayingWidget" class="now-playing-widget">
+        <span class="now-playing-icon">🧑‍💻</span>
+        <span class="now-playing-label">Now learning:</span>
+        <span class="now-playing-status"><strong>Machine Learning (Beginner)</strong></span>
+    </div> -->
+
+    <section id="nowPlaying" class="now-playing-section">
+  <div class="now-playing-card">
+    <img src="https://img.icons8.com/color/96/000000/artificial-intelligence.png" 
+         alt="Machine Learning Icon" class="now-playing-artwork">
+    <div class="now-playing-info">
+      <div class="now-playing-label">NOW LEARNING</div>
+      <div class="now-playing-title">Machine Learning</div>
+      <div class="now-playing-desc">Exploring the basics of models, data, and real-world AI applications. 🚀</div>
+      <div class="now-playing-level">Level: <span class="now-playing-badge">Beginner</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>© 2025 Bhavya Kothari. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/amateurcoder015" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      <a href="https://linkedin.com/in/bhavyaxkothari" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+      <a href="mailto:bhavyaskothari@gmail.com" aria-label="Email">Email</a>
+    </div>
+  </div>
+</footer>
+
+
+    <div id="pageTransition" class="transition-overlay"></div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
