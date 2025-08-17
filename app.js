@@ -277,7 +277,14 @@ function executeCommand(action) {
       scrollToSection('contact');
       break;
     case 'show-coming-soon':
-      showNotification('Resume download coming soon!');
+      showNotification('Downloading...');
+      // Create a hidden link dynamically
+      const link = document.createElement("a");
+      link.href = "Bhavya Kothari- resume.pdf";              // your resume file
+      link.download = "Bhavya_Resume.pdf";       // filename for download
+      document.body.appendChild(link);       // required for Firefox
+      link.click();
+      document.body.removeChild(link);       // cleanup
       break;
     case 'highlight-tech-stack':
       scrollToSection('about');
