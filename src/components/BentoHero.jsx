@@ -18,6 +18,7 @@ import {
 } from 'lucide-react';
 import { SOCIAL_LINKS, PERSONAL_INFO } from '../data/socialLinks';
 import ProjectVisual from './ProjectVisual';
+import myImage from '../assets/my_image.jpeg';
 
 export default function BentoHero({ onOpenContact, onSelectProject }) {
   const [currentFocusIndex, setCurrentFocusIndex] = useState(0);
@@ -134,7 +135,7 @@ export default function BentoHero({ onOpenContact, onSelectProject }) {
           data-cursor="ME"
         >
           <img 
-            src="/my_image.jpeg" 
+            src={myImage} 
             alt="Bhavya Kothari Portrait" 
             className="w-full h-full object-cover object-top filter brightness-[0.92] contrast-[1.05] group-hover:scale-105 transition-transform duration-700 ease-out"
           />
