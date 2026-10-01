@@ -4,9 +4,9 @@ Personal portfolio: building at the intersection of Technology, Data & Finance.
 
 **Live site:** https://amateurcoder015.github.io/BhavyaKothari-ResumeSite/
 
-[![Watch the 23-second tour](media/portfolio-brag.jpg)](media/portfolio-brag.mp4)
+[![Portfolio tour preview](media/portfolio-brag.gif)](media/portfolio-brag.mp4)
 
-*Click the preview to watch the 23-second tour.*
+*Silent preview above. [Click for the full 23-second video with sound.](media/portfolio-brag.mp4)*
 
 ## What's inside
 
